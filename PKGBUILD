@@ -20,8 +20,8 @@ package() {
   cp -r $srcdir/etc $pkgdir
   cp -r $srcdir/opt $pkgdir
   cp -r $srcdir/usr $pkgdir
-  install -d -m755 $pkgdir/etc/udev/rules.d
-  install -D -m644 $srcdir/brscan4.rules $pkgdir/etc/udev/rules.d
+  install -d -m755 $pkgdir/usr/lib/udev/rules.d/
+  install -D -m644 $srcdir/brscan4.rules $pkgdir/usr/lib/udev/rules.d/
   install -D -m644 $srcdir/agree.html $pkgdir/usr/share/licenses/$pkgname/LICENSE.html
   mv $pkgdir/usr/lib64 $pkgdir/usr/lib
   cd $pkgdir/usr/lib/sane
