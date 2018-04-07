@@ -19,10 +19,10 @@ package() {
   cp -r $srcdir/etc $pkgdir
   cp -r $srcdir/opt $pkgdir
   cp -r $srcdir/usr $pkgdir
+  mv $pkgdir/usr/lib64 $pkgdir/usr/lib  
   install -d -m755 $pkgdir/usr/lib/udev/rules.d/
   install -D -m644 $srcdir/brscan4.rules $pkgdir/usr/lib/udev/rules.d/
   install -D -m644 $srcdir/agree.html $pkgdir/usr/share/licenses/$pkgname/LICENSE.html
-  mv $pkgdir/usr/lib64 $pkgdir/usr/lib
   cd $pkgdir/usr/lib/sane
   ln -sf libsane-brother4.so.1.0.7 libsane-brother4.so.1
   ln -sf libsane-brother4.so.1 libsane-brother4.so
