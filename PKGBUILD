@@ -12,6 +12,7 @@ install=brscan4.install
 pkg="${pkgname}-${pkgver/_/-}.x86_64.rpm"
 pkg_md5sum="9319e08317382f76f5e8ad294de8c569"
 
+backup=("/opt/brother/scanner/brscan4/brsanenetdevice4.cfg")
 source=("http://download.brother.com/welcome/dlf006648/$pkg" "http://www.brother.com/agreement/English_sane/agree.html" "brscan4.rules")
 md5sums=($pkg_md5sum 'ccffb9a6f6d436b21be25b0241068981' 'a865404f01de89430be88638bcb77f60')
 
