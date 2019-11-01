@@ -1,5 +1,5 @@
 pkgname=brscan4
-pkgver=0.4.4_4
+pkgver=0.4.8_1
 pkgrel=1
 pkgdesc="SANE drivers from Brother for brscan4 compatible models"
 url="http://support.brother.com/g/s/id/linux/en"
@@ -9,7 +9,7 @@ arch=('x86_64')
 install=brscan4.install
 
 pkg="${pkgname}-${pkgver/_/-}.x86_64.rpm"
-pkg_md5sum="9319e08317382f76f5e8ad294de8c569"
+pkg_md5sum="2c98ad8269b4634e099c67bb0532f5e3"
 
 backup=(opt/brother/scanner/brscan4/brsanenetdevice4.cfg)
 source=("http://download.brother.com/welcome/dlf006648/$pkg" "http://www.brother.com/agreement/English_sane/agree.html" "brscan4.rules")
@@ -19,7 +19,7 @@ package() {
   cp -r $srcdir/etc $pkgdir
   cp -r $srcdir/opt $pkgdir
   cp -r $srcdir/usr $pkgdir
-  mv $pkgdir/usr/lib64 $pkgdir/usr/lib  
+  mv $pkgdir/usr/lib64 $pkgdir/usr/lib
   install -d -m755 $pkgdir/usr/lib/udev/rules.d/
   install -D -m644 $srcdir/brscan4.rules $pkgdir/usr/lib/udev/rules.d/
   install -D -m644 $srcdir/agree.html $pkgdir/usr/share/licenses/$pkgname/LICENSE.html
